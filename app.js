@@ -17,7 +17,7 @@ io.on('connection',function (socket){
     socket.on('sendLocation',function (data){
         io.emit("receive-location", {id: socket.id, ...data})
     });
-    //console.log("connected");
+    console.log("connected");
     socket.on("disconnect",function(){
         io.emit("user-disconnected",socket.id)
     }) 
